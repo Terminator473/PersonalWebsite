@@ -16,10 +16,10 @@ header {
     width: 30%;
     position: fixed;
     top: 20px;
+    transition: ease 0.4s;
 }
 
 .download {
-    position: relative;
     z-index: 2;
 }
 
@@ -51,4 +51,13 @@ nav::before {
 
 nav:hover::before {
     opacity: 1;
+}
+
+.button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: blue;
+    border-radius: 15px;
+    padding: 10px;
 }
