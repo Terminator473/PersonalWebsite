@@ -5,7 +5,7 @@ body {
     display: flex;
     flex-direction: column;
     align-content: center;
-    height: 100vh;
+    min-height: 100vh;
     align-items: center;
 }
 
@@ -16,11 +16,17 @@ header {
     width: 30%;
     position: fixed;
     top: 20px;
+    animation: dropDown ease-in 1s;
     transition: ease 0.4s;
+    z-index: 9;
 }
 
 .download {
-    z-index: 2;
+    
+}
+
+.download-app:active {
+    transform: scale(1.05);
 }
 
 nav {
@@ -30,33 +36,77 @@ nav {
     justify-content: space-around;
     width: 100%;
     padding: 10px;
+    height: 50px;
     background: black;
     border-radius: 15px;
     position: relative;
     overflow: hidden;
+    box-shadow: 10px 10px 10px gray;
 }
 
-nav::before {
-    content: "";
-    opacity: 0;
+
+
+.card:nth-child(2) {
     position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(90deg, red, green, blue);
-    z-index: 0;
-    transition: ease 0.4s;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 320px;
+    width: 290px;
+    right: 55%;
+    top: 120px;
+    border: 3px solid white;
+    background: black;
+    box-shadow: 2px 2px 10px black;
 }
-
-nav:hover::before {
-    opacity: 1;
-}
-
-.button {
+.card:nth-child(3) {
     position: absolute;
-    top: 50%;
-    background: blue;
-    border-radius: 15px;
-    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 520px;
+    width: 290px;
+    left: 55%;
+    top: 150px;
+    border: 3px solid white;
+    background: black;
+    box-shadow: 2px 2px 10px black;
 }
+
+.card:nth-child(4) {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 320px;
+    width: 290px;
+    right: 55%;
+    top: 500px;
+    border: 3px solid white;
+    background: black;
+    box-shadow: 2px 2px 10px black;
+}
+
+.experience {
+    
+}
+
+.about {
+    
+}
+
+.goals {
+    
+}
+
+
+@keyframes dropDown {
+    from {
+        top: -25%;
+    }
+    to {
+        top: 20px;
+    }
+}
+
+
